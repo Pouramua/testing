@@ -3,17 +3,28 @@ var config = require('./knexfile')[environment]
 var connection = require('knex')(config)
 
 module.exports = {
-  getUser: getUser,
-  getUsers: getUsers
+  getUsers: getUsers,
+  getAllParents: getAllParents,
+  getAllChildren: getAllChildren
+  // getUser: getUser
 }
 
 function getUsers (testDb) {
-  // Use a test database if one is passed in, or the connection defined above.
   var db = testDb || connection
   return db('users').select()
 }
 
-function getUser (id, testDb) {
+function getAllParents (testDb) {
   var db = testDb || connection
-  return db('users').where('id', id)
+  return db('parents').select()
 }
+
+function getAllChildren (testDb) {
+  var db = testDb || connection
+  return db('children').select()
+}
+
+// function getUser (id, testDb) {
+//   var db = testDb || connection
+//   return db('users').where('id', id)
+// }

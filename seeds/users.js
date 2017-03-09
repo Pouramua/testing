@@ -22,12 +22,12 @@ exports.seed = function (knex, Promise) {
         knex('users').insert({id: 99918, name: 'Resolute Rail', email: 'rail@example.org'}),
         knex('users').insert({id: 99919, name: 'Senescent Sloth', email: 'sloth@example.org'}),
         knex('users').insert({id: 99920, name: 'Tumultuous Terrapin', email: 'terrapin@example.org'}),
-        knex('users').insert({id: 99921, name: 'Unassailable Urial', email: 'urial@example.org'}),
-        knex('users').insert({id: 99922, name: 'Voracious Viscacha', email: 'viscacha@example.org'}),
-        knex('users').insert({id: 99923, name: 'Wondering Wombat', email: 'wombat@example.org'}),
-        knex('users').insert({id: 99924, name: 'Xenial Xerus', email: 'xerus@example.org'}),
-        knex('users').insert({id: 99925, name: 'Yielding Yak', email: 'yak@example.org'}),
-        knex('users').insert({id: 99926, name: 'Zaftig Zebu', email: 'zebu@example.org'})
+        // knex('users').insert({id: 99921, name: 'Unassailable Urial', email: 'urial@example.org'}),
+        // knex('users').insert({id: 99922, name: 'Voracious Viscacha', email: 'viscacha@example.org'}),
+        // knex('users').insert({id: 99923, name: 'Wondering Wombat', email: 'wombat@example.org'}),
+        // knex('users').insert({id: 99924, name: 'Xenial Xerus', email: 'xerus@example.org'}),
+        // knex('users').insert({id: 99925, name: 'Yielding Yak', email: 'yak@example.org'}),
+        // knex('users').insert({id: 99926, name: 'Zaftig Zebu', email: 'zebu@example.org'})
       ]);
     });
 };
