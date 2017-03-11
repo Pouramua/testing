@@ -4,6 +4,7 @@ var db = require('../db')
 
 module.exports = {
   get: get,
+  getHome: getHome,
   getParents: getParents,
   getChildren: getChildren
 }
@@ -16,6 +17,10 @@ function get (req, res) {
     .catch(function (err) {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
+}
+
+function getHome (req, res) {
+  res.send('Welcome to the homepage')
 }
 
 function getParents (req, res) {
