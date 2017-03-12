@@ -3,7 +3,6 @@ exports.up = function (knex, Promise) {
     table.increments('id').primary()
     table.string('name')
     table.string('age')
-    table.string('parent_id')
   })
 }
 

@@ -12,9 +12,9 @@ exports.seed = function (knex, Promise) {
         knex('children').insert({id: 88808, name: 'Te Ataakura Apanui', age: 5}),
         knex('children').insert({id: 88809, name: 'Pakanui Apanui', age: 3}),
         knex('children').insert({id: 88810, name: 'Te Aomihia Apanui', age: 1}),
-        knex('children').insert({id: 88812, name: 'Tahatu Parata-Burney', age: 1}),
-        knex('children').insert({id: 88813, name: 'Taybra Sykes-Martin', age: 3}),
-        knex('children').insert({id: 88814, name: 'Tuparoa Kopua', age: 2}),
+        knex('children').insert({id: 88811, name: 'Tahatu Parata-Burney', age: 1}),
+        knex('children').insert({id: 88812, name: 'Taybra Sykes-Martin', age: 3}),
+        knex('children').insert({id: 88813, name: 'Tuparoa Kopua', age: 2}),
       ])
     })
 }
