@@ -22,3 +22,4 @@ npm start
 3. As a user I want to be able to access information about my own child after logging in so that I can find out more about them.
     - This is a one to one or many depending how many children you have relationship: a user or parent has ONE profile page and one or many kids connected to that one page.
     - You'll need a profiles table with a user_id column and some other useful information about the user, like some ID number that'll relate them to their child/rens information or data.<br><br>
+4. 
