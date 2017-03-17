@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Te Puna Reo o Raparapaririki</title>
-  </head>
-  <body>
-    <ul>
-    {{#each children}}
-      <br>This is my ID: {{id}}<br>
-      My name is {{name}}<br>
-      My email is {{parent_id}}<br>
-    {{/each}}
-    <a href="/home">Back to Home</a>
+<body>
+  <ul>
+  {{#each children}}
+    <a href='/child/{{id}}'>{{name}}</a><br>
+  {{/each}}
 
-    </ul>
-  </body>
-</html>
+  <br><br>
+  <a href="/home">Back to Home</a>
+  </ul>
+</body>

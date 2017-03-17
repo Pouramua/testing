@@ -3,24 +3,18 @@ var express = require('express')
 var db = require('../db')
 
 module.exports = {
-  get: get,
   getHome: getHome,
+  getForm: getForm,
   getParents: getParents,
-  getChildren: getChildren
-}
-
-function get (req, res) {
-  db.getUsers()
-    .then(function (users) {
-      res.render('index', { users: users })
-    })
-    .catch(function (err) {
-      res.status(500).send('DATABASE ERROR: ' + err.message)
-    })
+  getChildren: getChildren,
+  getChildById: getChildById
 }
 
 function getHome (req, res) {
-  res.send('Welcome to the homepage')
+  res.render('home')
+}
+function getForm(req, res) {
+  res.render('form')
 }
 
 function getParents (req, res) {
@@ -41,4 +35,8 @@ function getChildren (req, res) {
     .catch(function (err) {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
+}
+
+function getChildById (req, res) {
+  res.send('Helloooo')
 }
