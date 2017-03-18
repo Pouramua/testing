@@ -5,6 +5,8 @@ var db = require('../db')
 module.exports = {
   getHome: getHome,
   getForm: getForm,
+  getAbout: getAbout,
+  getContact: getContact,
   getParents: getParents,
   getChildren: getChildren,
   getChildById: getChildById
@@ -13,8 +15,17 @@ module.exports = {
 function getHome (req, res) {
   res.render('home')
 }
+
 function getForm(req, res) {
   res.render('form')
+}
+
+function getAbout(req, res) {
+  res.render('about')
+}
+
+function getContact(req, res) {
+  res.render('contact')
 }
 
 function getParents (req, res) {

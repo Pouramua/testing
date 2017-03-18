@@ -1,15 +1,111 @@
+/*nav bar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+  width: 200px;
+  border-right: 1px solid #bbb;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+/*body of all pages*/
+
 body {
-  background-color: #6FE2EB;
+  width: auto;
+  height: auto;
+  background-color: purple;
+  /*background: -webkit-radial-gradient(white, cyan, blue);
+  background: -o-radial-gradient(white, cyan, blue);
+  background: -moz-radial-gradient(white, cyan, blue);
+  background: radial-gradient(white, cyan, blue);*/
   text-align: center;
 }
 
-#home {
-  width: 300px;
-  margin: auto;
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: black;
+  font-family: bold;
 }
 
-#mihi {
+/*home page*/
+
+#home, #about {
+  background-color: #333;
   color: white;
-  width: 300px;
+  width: 500px;
   margin: auto;
+  font-size: 25px;
+  font-family: cursive;
+}
+
+/*contact page*/
+
+#email, #phone, #address {
+  height: 300px;
+  width: 300px;
+  background-color: #333;
+  border: 1px solid #bbb;
+  color: white;
+  font-family: cursive;
+}
+
+.container {
+  display: flex;
+}
+
+/*sign up/register form*/
+
+.signup-form {
+  float: inherit;
+  text-align: center;
+  color: white;
+}
+
+input {
+  width: 20%;
+  padding: 12px 12px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+input:focus {
+    border: 3px solid #555;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
 }
