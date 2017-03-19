@@ -16,16 +16,16 @@ function getHome (req, res) {
   res.render('home')
 }
 
-function getForm(req, res) {
-  res.render('form')
-}
-
 function getAbout(req, res) {
   res.render('about')
 }
 
 function getContact(req, res) {
   res.render('contact')
+}
+
+function getForm(req, res) {
+  res.render('form')
 }
 
 function getParents (req, res) {
@@ -49,5 +49,14 @@ function getChildren (req, res) {
 }
 
 function getChildById (req, res) {
-  res.send('Helloooo')
+  res.send('Child Details')
+  // var id = req.params.id
+  // db.getChildById()
+  //   .where('id', id)
+  //   .then(function (child) {
+  //   res.render('child', id)
+  //   })
+  //   .catch(function (err) {
+  //     res.status(500).send('DATABASE ERROR: ' + err.message)
+  //   })
 }

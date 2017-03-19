@@ -4,7 +4,8 @@ var connection = require('knex')(config)
 
 module.exports = {
   getAllParents: getAllParents,
-  getAllChildren: getAllChildren
+  getAllChildren: getAllChildren,
+  getChildById: getChildById
 }
 
 function getAllParents (testDb) {
@@ -19,5 +20,5 @@ function getAllChildren (testDb) {
 
 function getChildById (id, testDb) {
   var db = testDb || connection
-  return db('relationships').where('id', id)
+  return db('children').select('id')
 }

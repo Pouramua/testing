@@ -16,6 +16,11 @@ li {
   border-right: 1px solid #bbb;
 }
 
+li:last-child {
+  float: right;
+  border-left: 1px solid #bbb;
+}
+
 li a {
   display: block;
   color: white;
@@ -72,7 +77,7 @@ p {
 
 /*contact page*/
 
-#email, #phone, #address {
+#email, #phone, #address, #photos, #songs, #teachers {
   font-size: 20px;
   height: 300px;
   width: 300px;
@@ -108,7 +113,7 @@ p {
 /*sign up/register form*/
 
 .signup-form {
-  float: inherit;
+  display: inline;
   text-align: center;
   color: white;
 }
