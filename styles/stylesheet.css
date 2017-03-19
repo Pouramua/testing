@@ -72,12 +72,25 @@ p {
   font-family: cursive;
   border-radius: 8px;
   padding: 10px;
+}
 
+#photos, #songs, #teachers {
+  font-size: 20px;
+  height: 200px;
+  width: 300px;
+  background-color: white;
+  border: 1px solid #bbb;
+  color: purple;
+  font-family: cursive;
+  margin: auto;
+  padding: 10px;
+  justify-content: center;
+  border-radius: 8px;
 }
 
 /*contact page*/
 
-#email, #phone, #address, #photos, #songs, #teachers {
+#email, #phone, #address {
   font-size: 20px;
   height: 300px;
   width: 300px;
