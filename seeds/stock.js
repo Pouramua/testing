@@ -14,6 +14,6 @@ exports.seed = function(knex, Promise) {
         {id: 7, nappies: '10-', wipes: 'LOW', formula: '', children_id: 88810},
         {id: 8, nappies: '10+', wipes: '1pk', formula: '', children_id: 88811},
         {id: 9, nappies: '20+', wipes: '2pks', formula: '', children_id: 88813}
-      ]);
-    });
-};
+      ])
+    })
+}
