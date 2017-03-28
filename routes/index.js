@@ -1,15 +1,16 @@
 var express = require('express')
+var knex = require('knex')
 
 var db = require('../db')
 
 module.exports = {
   getHome: getHome,
-  getForm: getForm,
   getAbout: getAbout,
   getContact: getContact,
+  getForm: getForm,
   getParents: getParents,
   getChildren: getChildren,
-  getChildById: getChildById
+  getChild: getChild
 }
 
 function getHome (req, res) {
@@ -29,7 +30,7 @@ function getForm(req, res) {
 }
 
 function getParents (req, res) {
-  db.getAllParents()
+  db.getParents()
     .then(function (parents) {
       res.render('parents', { parents: parents })
     })
@@ -39,7 +40,7 @@ function getParents (req, res) {
 }
 
 function getChildren (req, res) {
-  db.getAllChildren()
+  db.getChildren()
     .then(function (children) {
       res.render('children', { children: children })
     })
@@ -48,15 +49,16 @@ function getChildren (req, res) {
     })
 }
 
-function getChildById (req, res) {
-  res.send('Child Details')
-  // var id = req.params.id
-  // db.getChildById()
-  //   .where('id', id)
-  //   .then(function (child) {
-  //   res.render('child', id)
-  //   })
-  //   .catch(function (err) {
-  //     res.status(500).send('DATABASE ERROR: ' + err.message)
-  //   })
+function getChild (req, res) {
+  var id = req.params.id
+
+  db.getChild(id)
+    .join('stock', 'children.id', '=', 'stock.children_id')
+    .select()
+    .then(function (child) {
+    res.render('child', {children: child})
+    })
+    .catch(function (err) {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
 }

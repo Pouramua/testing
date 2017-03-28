@@ -22,9 +22,9 @@ server.use(bodyParser.urlencoded({ extended: true }))
 // Routes
 
 server.get('/home', index.getHome)
-server.get('/form', index.getForm)
 server.get('/about', index.getAbout)
 server.get('/contact', index.getContact)
+server.get('/form', index.getForm)
 server.get('/parents', index.getParents)
 server.get('/children', index.getChildren)
-server.get('/child/:id', index.getChildById)
+server.get('/child/:id', index.getChild)

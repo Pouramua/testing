@@ -1,6 +1,10 @@
-<h1> {{name}} </h1>
+{{#each children}}
+  <h1> {{name}} </h1>
 
-For {{name}}'s stock supplies
-Nappies: {{nappies}}
-Wipes: {{wipes}}
-Formula: {{formula}}
+  For {{name}}'s stock supplies
+  Nappies: {{nappies}}
+  Wipes: {{wipes}}
+  Formula: {{formula}}
+  <br>
+{{/each}}
+<a href="/home">Go Back</a>

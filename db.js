@@ -3,22 +3,22 @@ var config = require('./knexfile')[environment]
 var connection = require('knex')(config)
 
 module.exports = {
-  getAllParents: getAllParents,
-  getAllChildren: getAllChildren,
-  getChildById: getChildById
+  getParents: getParents,
+  getChildren: getChildren,
+  getChild: getChild
 }
 
-function getAllParents (testDb) {
+function getParents (testDb) {
   var db = testDb || connection
   return db('parents').select()
 }
 
-function getAllChildren (testDb) {
+function getChildren (testDb) {
   var db = testDb || connection
   return db('children').select()
 }
 
-function getChildById (id, testDb) {
+function getChild (id, testDb) {
   var db = testDb || connection
-  return db('children').select('id')
+  return db('children').where('children.id', id)
 }
