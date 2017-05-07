@@ -43,10 +43,6 @@ body {
   width: auto;
   height: auto;
   background-color: black;
-  /*background: -webkit-radial-gradient(white, cyan, blue);
-  background: -o-radial-gradient(white, cyan, blue);
-  background: -moz-radial-gradient(white, cyan, blue);
-  background: radial-gradient(white, cyan, blue);*/
   text-align: center;
 }
 
@@ -106,51 +102,4 @@ p {
 
 .container {
   display: flex;
-}
-
-/*all kids page*/
-.kids {
-  display: flex;
-  font-size: 16px;
-  width: 300px;
-  background-color: white;
-  color: purple;
-  font-family: cursive;
-  margin: auto;
-  padding: 10px;
-  text-align: center;
-  justify-content: center;
-  border-radius: 4px;
-}
-
-/*sign up/register form*/
-
-.signup-form {
-  display: inline;
-  text-align: center;
-  color: white;
-}
-
-input {
-  width: 20%;
-  padding: 12px 12px;
-  margin: 5px 0;
-  box-sizing: border-box;
-  border-radius: 4px;
-}
-
-input:focus {
-    border: 3px solid #555;
-}
-
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 4px;
 }
